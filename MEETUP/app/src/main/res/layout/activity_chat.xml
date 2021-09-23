@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".Chat">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="#76A63E"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/image"
+            android:src="@drawable/logo">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="His name"
+                android:textSize="18sp"
+                android:id="@+id/name"
+                android:textStyle="bold"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/white"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="His email"
+                android:textSize="18sp"
+                android:id="@+id/email"
+                android:textStyle="italic"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/white"></TextView>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/recycle"
+        android:layout_above="@+id/chat"></androidx.recyclerview.widget.RecyclerView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/chat">
+    <EditText
+        android:layout_width="0dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:layout_weight="1"
+        android:padding="15dp"
+        android:id="@+id/chatting"
+        android:layout_height="wrap_content"
+        android:hint="Start Typing"
+        ></EditText>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/send"
+        android:src="@mipmap/ic_send"
+        ></ImageButton>
+</LinearLayout>
+</RelativeLayout>

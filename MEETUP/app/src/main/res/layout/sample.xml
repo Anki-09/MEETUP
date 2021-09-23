@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_below="@+id/radiogroup">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardMaxElevation="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="#B4BD5A"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/logo">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/glass_antiqua"
+                    android:text="Name"
+                    android:textSize="25dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/amita"
+                    android:text="Email"
+                    android:textSize="15dp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
